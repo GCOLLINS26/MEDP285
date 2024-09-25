@@ -1,0 +1,96 @@
+body{
+
+	background-color: #006fcd;
+ width: 960px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 350px;
+    margin-right: 150px;
+
+
+nav  {
+				padding: 20px;
+				text-align: center;
+				
+		}
+
+
+		nav a {
+			margin: 0px 10px 0px 10px;
+			color: #000;
+			text-decoration: none;
+		}
+
+
+.container {
+  position: relative;
+}
+.container img.main {
+  position: absolute;
+}
+img {
+  width: 650px;
+  height: 400px;
+  display: block;
+}
+
+.main {
+  z-index: 5;
+}
+
+.main:hover {
+  opacity: 0;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
