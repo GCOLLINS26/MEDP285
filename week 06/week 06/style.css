@@ -1,0 +1,128 @@
+body{
+	background-color: #CBD5C0;
+}
+
+nav a{
+	text-decoration: none;
+	margin: 0px 10px 0px 0px;
+	color: #000;
+}
+
+nav{
+	text-align: center;
+	background-color: #06a94d;
+}
+
+h1{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+	background-color: #9ACD32;
+}
+
+.center{
+	margin-left:450px;
+	margin-right:300px;
+}
+
+ td {
+	background: #C3F550;
+	width: 200px;
+	height: 200px;
+	padding: 40px;
+	border: 20px solid black;
+	margin: 40px;
+	
+}
+th{
+	background: #C3F550;
+	width: 200px;
+	height: 50px;
+	padding: 40px;
+	border: 10px solid black;
+	margin: 40px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 70%;
+    position: relative;
+    align-items: center;
+    
+}
+
+.circle: before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: #CBD5C0;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: spin 4s infinite linear;
+    align-items: center;
+}
+
+.circle::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: #CBD5C0;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    animation: spin 4s infinite linear;
+    align-items: center;
+}
+
+.op-art-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+    div {
+    	background:#06a94d ;
+    	height: 100px;
+    	width: 200px;
+    	display: inline-block;
+    }
+
+span {
+	background:#06a94d ;
+    	height: 100px;
+    	width: 200px;
+    	display: inline-block;
+}
+
+.container {
+	width: 800px;
+}
+
+.box{
+
+	background: green;
+	width: 200px;
+	height: 200px;
+	padding: 40px;
+	border:20px solid black;
+	margin: 40px;
+}
+
+
+
