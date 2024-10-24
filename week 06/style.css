@@ -43,9 +43,76 @@ th{
 	padding: 40px;
 	border: 10px solid black;
 	margin: 40px;
-
 }
 
-html {
-	box-sizing: border-box;
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 70%;
+    position: relative;
+    align-items: center;
+    
 }
+
+.circle: before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-items: center;
+}
+
+.circle::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-items: center;
+}
+
+.op-art-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+}
+
+    div {
+    	background:#06a94d ;
+    	height: 100px;
+    	width: 200px;
+    	display: inline-block;
+    }
+
+span {
+	background:#06a94d ;
+    	height: 100px;
+    	width: 200px;
+    	display: inline-block;
+}
+
+.container {
+	width: 800px;
+}
+
+.box{
+
+	background: green;
+	width: 200px;
+	height: 200px;
+	padding: 40px;
+	border:20px solid black;
+	margin: 40px;
+}
+
+
+
