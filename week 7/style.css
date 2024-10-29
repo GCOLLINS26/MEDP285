@@ -1,0 +1,70 @@
+html{
+	box-sizing: border-box;
+}
+
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5{
+	text-transform: uppercase;
+}
+
+.container> *{
+	padding: 20px;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+header{
+	background: #66648B;
+	flex: 1 0 100%;
+	order: 1;
+	text-align: center;
+}
+
+main{
+	background: #FAF5AB;
+	flex: 1 0 500px;
+	order: 4;
+}
+
+nav{
+	background: #EF6F2F ;
+	flex: 1 0 100%;
+	order: 2;
+	text-align: center;
+}
+
+aside{
+	background:#F3B5CF ;
+	flex: 1 0 200px;
+	order: 3;
+}
+
+footer{
+	background: #9BDBF5;
+	flex: 1 0 200px;
+	order: 5;
+}
+
+li {
+	text-align: center;
+}
+
+nav a{
+
+	text-decoration: none;
+	margin: 0px 10px 0px 0px;
+	color: #ffffff;
+}
+
+
