@@ -1,0 +1,179 @@
+
+
+            body{
+                background-color: #583625;
+                padding: 0px;
+                margin: 0px;
+}
+            }
+
+            .nose{
+                border-radius:70px 70px 10px 10px / 200px 200px 100px 100px;
+                width:100px;
+                height:150px;
+                background: black;
+                margin-top: 500px;
+                margin-left: 700px;
+                 position: fixed;
+            }   
+
+            .mouth{
+                border-radius:70px 70px 10px 10px / 200px 200px 100px 100px;
+                width: 350px;
+                height: 100px;
+                margin-top: 600px;
+                margin-left: 580px;
+                background-color: #BC9E82;
+                 position: fixed;
+            }
+
+            .eye1{
+                border-radius:40px 40px 40px 40px / 100px 100px 50px 50px;
+                width: 100px;
+                height: 300px;
+                background-color: #000000;
+                margin-bottom: 2000px;
+                margin-left: 100px;
+                margin-right:900px;
+                position: fixed;
+                z-index: 8;
+                
+                
+
+            }
+            .eye2{
+                border-radius:40px 40px 40px 40px / 100px 100px 50px 50px;
+                width: 100px;
+                height: 300px;
+                background-color: #000000;
+                margin-bottom: 2000px;
+                margin-left: 1200px;
+                margin-right:10px;
+                position: fixed;
+                z-index: 8;
+            
+
+            }
+
+
+            .eye3{
+                border-radius:40px 40px 40px 40px / 100px 100px 50px 50px;
+                width: 100px;
+                height: 250px;
+                background-color: #FFFFFF;
+                position: fixed;
+                margin-bottom: 2000px;
+                margin-left: 1200px;
+                margin-right:10px;
+                z-index: 9;
+                 animation: colorFade 2s infinite;
+            }
+
+            .eye4{
+                border-radius:40px 40px 40px 40px / 100px 100px 50px 50px;
+                width: 100px;
+                height: 250px;
+                background-color: #FFFFFF;
+                position: fixed;
+                margin-bottom: 2000px;
+                margin-left: 100px;
+                margin-right:900px;
+                z-index: 9;
+                 animation: colorFade 2s infinite;
+            }
+
+.container> *{
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: flexwrap;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+header{
+   background-color: #583625;;
+    flex: 1 3 600px;
+    order: 1;
+    
+}
+
+aside{
+  background: #583625 ;
+    flex: 1 0 100%;
+    order: 2;
+    text-align: center;
+
+}
+
+  button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+   
+    .trail {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fadeOut 5s forwards;
+    }
+
+
+    .soap-trail {
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    }
+    .water-trail {
+      background: radial-gradient(circle, rgba(173, 216, 230, 0.8), rgba(173, 216, 230, 0));
+    }
+    .pink-trail {
+      background: radial-gradient(circle, rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0));
+    }
+    .white-liquid-trail {
+      background: radial-gradient(circle, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0));
+    }
+    .tan-liquid-trail {
+      background: radial-gradient(circle, rgba(210, 180, 140, 0.8), rgba(210, 180, 140, 0));
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(3);
+      }
+
+  }
+
+
+
+            @keyframes colorFade {
+            0% {
+                background-color: ##583625;
+            }
+            
+            
+            60% {
+                background-color: #583625;
+            }
+
+            100% {
+                background-color: #583625;
+            }
+
+

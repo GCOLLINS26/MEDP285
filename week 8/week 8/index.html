@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SKINCARE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+  function createLeaf() {
+    const leaf = document.createElement('div');
+    leaf.classList.add('leaf');
+    
+    leaf.style.left = Math.random() * 100 + 'vw';
+    leaf.style.animationDuration = 5 + Math.random() * 10 + 's';
+    leaf.style.animationDelay = Math.random() * 5 + 's';
+
+    document.getElementById('leafContainer').appendChild(leaf);
+
+    leaf.addEventListener('animationend', () => {
+      leaf.remove();
+    });
+  }
+
+  setInterval(createLeaf, 1000);
+</script>
+
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>How To Treat Your Skin</h1>
+
+			<div class="leaf-container" id="leafContainer"></div>
+		</header>	
+
+		<main>
+			<a href="epidermis.html"><h2>EPIDERMIS</h2></a> 
+			
+		</main>
+
+		<section>
+			<a href="dermis.html"><h2>DERMIS</h2></a>
+		</section>	
+
+		<aside>
+		<a href="https://royal-medspa.com/"><h2>HYPODERMIS</h2></a>
+				</aside>
+
+		<footer>
+			
+			<h2>Collins, Georganique '24</h2>
+		</footer>
+
+
+
+	</div>
+</body>
+</html>
