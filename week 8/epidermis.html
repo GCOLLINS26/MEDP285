@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>How to Take Care of Your Epidermis</title>
+	<link rel="stylesheet" type="text/css" href="Epidermis style.css">
+
+
+<script>
+
+ let trailType = null;
+
+
+  function activateTrail(type) {
+    trailType = type;
+    document.addEventListener('mousemove', createTrail);
+  }
+
+ 
+  function deactivateTrail() {
+    trailType = null;
+    document.removeEventListener('mousemove', createTrail);
+  }
+
+
+  function createTrail(event) {
+    if (!trailType) return;
+
+    const trail = document.createElement('div');
+    trail.classList.add('trail');
+
+
+    switch(trailType) {
+      case 'soap':
+        trail.classList.add('soap-trail');
+        break;
+      case 'water':
+        trail.classList.add('water-trail');
+        break;
+      case 'pink':
+        trail.classList.add('pink-trail');
+        break;
+      case 'white-liquid':
+        trail.classList.add('white-liquid-trail');
+        break;
+      case 'tan-liquid':
+        trail.classList.add('tan-liquid-trail');
+        break;
+    }
+
+    trail.style.left = `${event.pageX}px`;
+    trail.style.top = `${event.pageY}px`;
+    document.body.appendChild(trail);
+
+
+    trail.addEventListener('animationend', () => {
+      trail.remove();
+    });
+  }
+
+</script>
+</head>
+
+
+
+
+
+
+
+
+
+<body>	
+
+	<div class="container">
+		<header>
+<div class="eye1"></div>
+<div class="eye2"></div>
+<div class="eye3"></div>
+<div class="eye4"></div>
+<div class="nose"></div>
+<div class="mouth"></div>
+
+	</header>
+
+	<aside>
+
+
+
+ <button onclick="activateTrail('soap')"><img src="img/face wash.png" width="100">  </button>
+  <button onclick="activateTrail('water')"><img src="img/sink.png" width="100" 
+  	> </button>
+  <button onclick="activateTrail('pink')"><img src="img/serum.png"width="100"> </button>
+  <button onclick="activateTrail('white-liquid')"><img src="img/moisturizer.png"width="100" > </button>
+  <button onclick="activateTrail('tan-liquid')"><img src="img/sunscreen.png"width="100" > </button>
+</aside>
+
+
+
+
+
+
+
+</body>
+</html>
