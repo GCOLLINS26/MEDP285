@@ -1,0 +1,83 @@
+body {
+    background: #D3D3D3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: customfont;
+    src: url('naturebeauty.ttf');
+}
+
+
+h1 {
+    font-family: customfont;
+    text-align: center;
+    color: #FFB6C1;
+    font-size: 50px;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+}
+
+#page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+}
+
+#left-container {
+    border-right: 2px solid #ccc;
+}
+
+#right-container {
+    border-left: 2px solid #ccc;
+}
+
+.container {
+    background-color: #eee;
+    width: 15%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#table {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.table-surface {
+    width: 80%;
+    aspect-ratio: 1;
+    background: #964B00;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.piece-holder {
+    margin-bottom: 10px;
+}
+
+.peice {
+    width: 100px; 
+    height: auto;
+    cursor: grab;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+}
+
+.peice:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+
