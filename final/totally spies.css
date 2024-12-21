@@ -1,0 +1,215 @@
+body{
+    background-image: url(img/totallyback.webp);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  animation: fadeIn 2s ease-out;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.intro {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro .image-container img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 1.5s ease-out;
+}
+
+.intro .button {
+  background-color: #00b300;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  padding: 15px 40px;
+  animation: popIn 1s ease-out;
+}
+
+.intro .button:hover {
+  background-color: #33cc33;
+}
+
+.quiz-container {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.quiz-container .timer {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.quiz-container .question {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.quiz-container .options button {
+  background-color: #0099cc;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: slideInRight 1s ease-out;
+}
+
+.quiz-container .options button:hover {
+  background-color: #006699;
+}
+
+.result-container {
+  display: none;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-out;
+}
+
+.result {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.result-container .button {
+  background-color: #0099cc;
+  margin-top: 20px;
+}
+
+.result-container .button:hover {
+  background-color: #006699;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ff6600;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff6600;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff6600;
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sad {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.huge-fan-animation {
+  animation: confetti 2s ease-out forwards;
+}
+
+.mid-level-animation {
+  animation: shake 0.5s ease-out forwards;
+}
+
+.sad-animation {
+  animation: sad 1.5s ease-out forwards;
+}

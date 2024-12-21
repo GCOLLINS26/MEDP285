@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TRIVIA TIME</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+
+	<script>
+    const createBat = () => {
+      const bat = document.createElement('div');
+      bat.className = 'bat';
+      bat.style.top = `${Math.random() * window.innerHeight}px`;
+      document.body.appendChild(bat);
+
+      setTimeout(() => {
+        bat.remove();
+      }, 5000);
+    };
+
+    setInterval(createBat, 500);
+
+
+    function playAudio() {
+      const crowdAudio = document.getElementById('crowd-audio');
+      const hipAudio = document.getElementById('hip-audio');
+      
+      crowdAudio.play(); 
+      hipAudio.play(); 
+       }
+  </script>
+</head>
+<body>
+
+<h1>Trivia Time</h1>
+
+<nav>
+	<a href="Act 1.html">Start</a> 
+</nav>
+
+
+<button onclick="playAudio()">Start Music</button>
+
+
+<audio id="crowd-audio">
+  	<source src="sounds/crowd.mp3" type="audio/mpeg">
+</audio>
+<audio id="hip-audio" loop>
+  	<source src="sounds/hip.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

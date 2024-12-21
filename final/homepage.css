@@ -1,0 +1,95 @@
+body {
+  background-image: url(img/manor.webp);
+  margin: 0;
+  overflow: hidden;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+@font-face {
+  font-family: customfont;
+  src: url('BloodytypepersonaluseBold-OVe6e.OpenType');
+}
+
+h1 {
+  font-family: customfont;
+  text-align: center;
+  color: red;
+  font-size: 200px;
+  margin: 0;
+  padding: 20px;
+  animation: fadeIn 5s forwards, bounce 1s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: url(img/mark.png) no-repeat center/contain;
+  animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-100px, 50px);
+  }
+  50% {
+    transform: translate(100vw, calc(100vh - 100px)) rotate(10deg);
+  }
+  100% {
+    transform: translate(-100px, 50px);
+  }
+}
+
+nav {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: darkred;
+}

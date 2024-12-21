@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Totally spies</title>
+  <link rel="stylesheet" type="text/css" href="totally spies.css">
+<script>
+  let currentQuestion = 0;
+    let score = 0;
+    let timeLeft = 120;
+    let timer;
+
+    const questions = [
+      // 5 multiple-choice questions
+      { 
+        question: "What is the name of the organization they work for?",
+        choices: ["WOOHP", "S.P.I.E.S.", "M.I.6", "G.I.J.O.E"],
+        answer: 0
+      },
+      {
+        question: "Who is the team's leader?",
+        choices: ["Sam", "Clover", "Alex", "Mandy"],
+        answer: 0
+      },
+      {
+        question: "What color is Clover's spy suit?",
+        choices: ["Green", "Red", "Blue", "Yellow"],
+        answer: 3
+      },
+      {
+        question: "Where do the spies live?",
+        choices: ["Beverly Hills", "New York", "London", "Paris"],
+        answer: 0
+      },
+      {
+        question: "Who often invents their gadgets?",
+        choices: ["Jerry", "Sam", "Clover", "Alex"],
+        answer: 0
+      },
+      // 5 true/false questions
+      {
+        question: "The spies' suits are powered by AI.",
+        choices: ["True", "False"],
+        answer: 1
+      },
+      {
+        question: "Jerry is a spy too.",
+        choices: ["True", "False"],
+        answer: 1
+      },
+      {
+        question: "Clover dislikes shopping.",
+        choices: ["True", "False"],
+        answer: 1
+      },
+      {
+        question: "Sam is the oldest of the three.",
+        choices: ["True", "False"],
+        answer: 0
+      },
+      {
+        question: "The show first aired in the 2000s.",
+        choices: ["True", "False"],
+        answer: 0
+      }
+    ];
+
+  function startQuiz() {
+    document.querySelector('.intro').style.display = 'none';
+    document.querySelector('.quiz-container').style.display = 'block';
+    document.getElementById('background-music').play(); 
+    startTimer();
+    loadQuestion();
+}
+
+    function startTimer() {
+      timer = setInterval(() => {
+        timeLeft--;
+        document.querySelector('.timer').innerText = `Time Left: ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          showResult();
+        }
+      }, 1000);
+    }
+
+    function loadQuestion() {
+      if (currentQuestion < questions.length) {
+        const q = questions[currentQuestion];
+        document.querySelector('.question').innerText = q.question;
+
+        const options = document.querySelector('.options');
+        options.innerHTML = '';
+
+        q.choices.forEach((choice, index) => {
+          const button = document.createElement('button');
+          button.innerText = choice;
+          button.onclick = () => checkAnswer(index);
+          options.appendChild(button);
+        });
+      } else {
+        clearInterval(timer);
+        showResult();
+      }
+    }
+
+    function checkAnswer(selected) {
+      const q = questions[currentQuestion];
+
+      if (selected === q.answer) {
+        score++;
+      } else {
+        score--;
+      }
+
+      currentQuestion++;
+      loadQuestion();
+    }
+
+    function showResult() {
+      document.querySelector('.quiz-container').style.display = 'none';
+      const resultContainer = document.querySelector('.result-container');
+      resultContainer.style.display = 'block';
+
+      let resultMessage = '';
+      if (score > 7) {
+        resultMessage = "You're a HUGE fan!";
+      } else if (score >= 5) {
+        resultMessage = "It's been a while since you watched the show, huh?";
+      } else {
+        resultMessage = "Loser.";
+      }
+
+      document.querySelector('.result').innerText = resultMessage;
+    }
+
+    function playClickSound() {
+      clickSound.play();
+    }
+
+      window.onload = () => {
+      const bgMusic = document.getElementById('background-music');
+      bgMusic.play();
+
+      clickSound = document.getElementById('click-sound');
+    };
+  </script>
+</script>
+</head>
+<body>
+  <div class="intro">
+    <h1>Are You the Number One Fan?</h1>
+    <div class="image-container">
+      <img src="img/totally spies1.webp" alt="Totally Spies" width="600">
+    </div>
+    <button class="button" onclick="startQuiz()">I AM!</button>
+  </div>
+
+  <div class="quiz-container">
+    <div class="timer">Time Left: 120s</div>
+    <div class="question"></div>
+    <div class="options"></div>
+  </div>
+
+  <div class="result-container">
+    <h1 class="result"></h1>
+    <button class="button" onclick="location.href='homepage.html'">Back to Homepage</button>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="sounds/gameloop.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="click-sound">
+    <source src="sounds/pop.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
